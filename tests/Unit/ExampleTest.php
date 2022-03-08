@@ -1,5 +1,5 @@
 <?php
-
+//モデルテストを追加する
 namespace Tests\Unit;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
