@@ -59,6 +59,14 @@ jobs:
     - name: Install composer dependencies
       run: |
         composer install --no-scripts
+        composer require bref/bref
+        #php artisan vendor:publish --tag=serverless-config
+        #https://serverless.co.jp/blog/38/
+        composer require bref/bref bref/laravel-bridge --update-with-dependencies
+        php artisan config:clear
+        cp .env.example .env
+        php artisan key:generate
+        php artisan env        
 
     - name: Prepare Laravel Application
       run: |
